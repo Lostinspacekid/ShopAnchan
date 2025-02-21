@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vestige Flax Oil</title>
-  <link rel="stylesheet" href="Glucosamine_P1/Glucosamine_P1_styles.css" />
+  <link rel="stylesheet" href="Flaxoil_P2/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -23,8 +23,47 @@
   </header>
   
 
-  <section id="product-Details" class="section">
-    
+  <section id="product-section" class="section">
+    <div class="product-header">
+      <h2>Find the product Made For You..💖</h2>
+      <div class="filter-search-container">
+        <div class="filter-container">
+          <label for="product-filter">Filter:</label>
+          <select id="product-filter" onchange="filterProducts()">
+            <option value="all">All</option>
+            <option value="Health & Wellness">Health & Wellness</option>
+            <option value="Personal Care">Personal Care</option>
+            <option value="Make-Up">Make-Up</option>
+            <option value="Premium Skin Care">Premium Skin Care</option>
+          </select>
+        </div>
+        <div class="search-container">
+          <input type="text" id="product-search" placeholder="Search products..." />
+          <button onclick="searchProducts()">Search</button>
+        </div>
+      </div>
+    </div>
+  
+    <div id="product-list" class="product-list">
+        <!-- Sample Products -->
+        <a href="Glucosamine_P1.html" class="product-link">
+          <div class="product-card" data-category="Health & Wellness">
+            <img src="Glucosamine_P1/Glucosamine_P1.jpg" alt="Health & Wellness" />
+            <h3>Vestige Glucosamine</h3>
+            <p>Click To know more.</p>
+          </div>
+          </a>
+      <a href="Flaxoil_P2.html" class="product-link">
+          <div class="product-card" data-category="Health & Wellness">
+            <img src="Flaxoil_P2/Flaxoil_P2.jpg" alt="Health & Wellness" />
+            <h3>Vestige Glucosamine</h3>
+            <p>Click To know more.</p>
+          </div>
+          </a>
+          
+        <!-- Add more products as needed -->
+      </div>
+      
   </section>
   
 
@@ -66,7 +105,7 @@
     <h2>Our Services</h2>
     <p>Details about the services offered...</p>
   </section>
-  <script src="Glucosamine_P1/Glucosamine_P1_script.js"></script>
+  <script src="Flaxoil_P2/script.js"></script>
 </body>
 
   
