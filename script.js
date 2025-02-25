@@ -30,6 +30,12 @@
   function redirectToProductPage(productPageUrl) {
     window.location.href = productPageUrl;
   }
+
+function toggleMenu() {
+  const navMenu = document.getElementById("nav-menu");
+  navMenu.classList.toggle("open");
+}
+
   
   // JavaScript for Hamburger Menu
 const hamburger = document.querySelector('.hamburger');
