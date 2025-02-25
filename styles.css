@@ -12,6 +12,9 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
+a {
+    text-decoration: none;
+}
 
 /* Header Styling */
 header {
