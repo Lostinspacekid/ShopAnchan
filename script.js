@@ -1,47 +1,30 @@
-  function filterProducts() {
-    const filterValue = document.getElementById("product-filter").value;
-    const products = document.querySelectorAll(".product-card");
-  
-    products.forEach((product) => {
-      if (filterValue === "all" || product.getAttribute("data-category") === filterValue) {
-        product.style.display = "block"; // Show product
-      } else {
-        product.style.display = "none"; // Hide product
-      }
-    });
-  }
-  
-
-  function searchProducts() {
-    const query = document.getElementById("product-search").value.toLowerCase();
-    const products = document.querySelectorAll(".product-card");
-  
-    products.forEach((product) => {
-      // Combine text content from product title and description
-      const productText = product.textContent.toLowerCase();
-      if (productText.includes(query)) {
-        product.style.display = "block";
-      } else {
-        product.style.display = "none";
-      }
-    });
-  }
-  
-  function redirectToProductPage(productPageUrl) {
-    window.location.href = productPageUrl;
-  }
-
+// Toggle Hamburger Menu
 function toggleMenu() {
   const navMenu = document.getElementById("nav-menu");
   navMenu.classList.toggle("open");
 }
 
-  
-  // JavaScript for Hamburger Menu
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('nav');
+// Filter Products
+function filterProducts() {
+  const filterValue = document.getElementById("product-filter").value;
+  const products = document.querySelectorAll(".product-card");
 
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('open'); // Toggle the open class
-  hamburger.classList.toggle('active'); // Change the hamburger icon to active state
-});
+  products.forEach((product) => {
+    if (filterValue === "all" || product.getAttribute("data-category") === filterValue) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
+}
+
+// Search Products
+function searchProducts() {
+  const query = document.getElementById("product-search").value.toLowerCase();
+  const products = document.querySelectorAll(".product-card");
+
+  products.forEach((product) => {
+    const productText = product.textContent.toLowerCase();
+    product.style.display = productText.includes(query) ? "block" : "none";
+  });
+}
